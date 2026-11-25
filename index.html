@@ -525,6 +525,160 @@ footer{color:#9A97AC}
 .sphint{font-size:24px;letter-spacing:.08em;min-height:30px;color:var(--lav3)}
 .q-listen.small-l{width:60px;height:60px;font-size:24px;margin-top:10px;display:inline-flex;align-items:center;justify-content:center;color:var(--lav2)}
 .q-listen.small-l .ic{width:28px;height:28px}
+/* ===== v3 international design ===== */
+body{background:#F6F5FB}
+body[data-v="home"] .screen{max-width:620px;padding-top:14px}
+body[data-v="lessons"] .screen{max-width:680px}
+@keyframes up3{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.h3>*{animation:up3 .5s cubic-bezier(.2,.8,.2,1) both}.h3>*:nth-child(2){animation-delay:.06s}.h3>*:nth-child(3){animation-delay:.12s}.h3>*:nth-child(4){animation-delay:.18s}.h3>*:nth-child(n+5){animation-delay:.24s}
+.h3-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+.h3-me{display:flex;align-items:center;gap:10px}.h3-me small{display:block;font-size:13px;color:var(--soft)}.h3-me b{font-size:18px;color:var(--ink)}
+.h3-av{width:44px;height:44px;border-radius:50%;border:0;background:#E4DEFF;color:#4A32C9;font:600 18px Rubik,sans-serif;cursor:pointer}
+.h3-pills{display:flex;align-items:center;gap:6px}
+.h3-pill{font-size:14px;font-weight:600;padding:6px 11px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.h3-pill.fire{color:#C2410C}.h3-pill.star{color:#A16207}
+.h3-mute{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--soft);display:flex;align-items:center;justify-content:center;cursor:pointer}.h3-mute .ic{width:18px;height:18px}
+.h3-hero{position:relative;overflow:hidden;background:#5B43E0;border-radius:28px;padding:22px 20px 20px;color:#fff;box-shadow:0 18px 40px -18px rgba(76,52,214,.75)}
+.h3-hero::before{content:"";position:absolute;left:-70px;top:-80px;width:210px;height:210px;border-radius:50%;background:#6E58EA}.h3-hero::after{content:"";position:absolute;left:28px;top:34px;width:12px;height:12px;border-radius:50%;background:#A797FA;box-shadow:-40px 70px 0 -2px #7F6BF0}
+.h3-hin{position:relative}
+.h3-kick{font-size:13px;color:#D9D1FF;font-weight:500}
+.h3-title{font-size:26px;line-height:1.25;margin:4px 0 14px;color:#fff;font-weight:700}
+.pl-box{background:rgba(32,18,120,.38);border-radius:18px;padding:4px 6px}
+.pl-step{width:100%;display:flex;align-items:center;gap:12px;padding:10px 8px;border:0;background:transparent;color:#fff;font-family:inherit;text-align:right;cursor:pointer;border-radius:12px}
+.pl-step+.pl-step{border-top:1px solid rgba(255,255,255,.1)}
+.pl-step:hover{background:rgba(255,255,255,.07)}
+.pl-dot{flex:none;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;border:1.5px solid rgba(255,255,255,.45);color:#E9E4FF}
+.pl-dot .ic{width:16px;height:16px;stroke-width:3}
+.pl-step.cur .pl-dot{background:#fff;color:#4A32C9;border-color:#fff}
+.pl-step.done .pl-dot{background:#34D399;border-color:#34D399;color:#053B2A}
+.pl-step.done b{text-decoration:line-through;text-decoration-color:rgba(255,255,255,.5);color:#D9D1FF}
+.pl-tx b{display:block;font-size:15px;font-weight:600}.pl-tx small{display:block;font-size:12.5px;color:#CFC6FF;margin-top:1px}
+.h3-go{margin-top:14px;width:100%;border:0;border-radius:16px;background:#fff;color:#3E27B8;font:700 17px Rubik,sans-serif;padding:15px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:transform .15s}
+.h3-go .ic{width:20px;height:20px;stroke-width:2.6}.h3-go:hover{transform:translateY(-2px)}.h3-go:active{transform:scale(.98)}
+.h3-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.h3-wod,.h3-trip{position:relative;overflow:hidden;border-radius:24px;padding:16px;min-height:168px;text-align:right;font-family:inherit;display:flex;flex-direction:column;align-items:flex-start}
+.h3-wod{background:#DDF5EC;color:#064E3B}
+.h3-wod small,.h3-trip small{font-size:12.5px;font-weight:600;opacity:.85}
+.h3-wod b{font:700 26px Fredoka,Rubik,sans-serif;margin:6px 0 2px;direction:ltr}
+.h3-wod>span{font-size:13.5px;color:#0F766E}
+.h3-wodb{display:flex;gap:6px;margin-top:auto;padding-top:10px}
+.h3-round{width:38px;height:38px;border-radius:50%;border:0;background:#fff;color:#0F766E;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(6,78,59,.12)}.h3-round .ic{width:18px;height:18px}
+.h3-round.tool{min-width:0;min-height:0;padding:0}
+.h3-emo{position:absolute;left:12px;top:12px;font-size:30px;opacity:.95}
+.h3-trip{border:0;background:#FFE7DD;color:#7C2D12;cursor:pointer;transition:transform .15s}
+.h3-trip:hover{transform:translateY(-2px)}
+.h3-trip b{font-size:19px;margin:6px 0 2px}.h3-trip>span{font-size:13px;color:#9A3412}
+.h3-sky{position:absolute;left:0;bottom:0;width:100%;height:62px}
+.h3-bot{margin-top:12px;width:100%;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px 14px;font-family:inherit;text-align:right;cursor:pointer;transition:border-color .15s,transform .15s}
+.h3-bot:hover{border-color:#C9BEFF;transform:translateY(-1px)}
+.h3-bi{flex:none;width:44px;height:44px;border-radius:14px;background:#EFEBFF;color:#5B43E0;display:flex;align-items:center;justify-content:center}.h3-bi .ic{width:22px;height:22px}
+.h3-btx{flex:1}.h3-btx b{display:block;font-size:16px;color:var(--ink)}.h3-btx small{font-size:13px;color:var(--soft)}
+.h3-chev{color:#B4B0C6}.h3-chev .ic{width:20px;height:20px}
+.h3-sec{font-size:17px;margin:22px 2px 10px;color:var(--ink)}
+.h3-lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.h3-les{border:1px solid var(--line);background:#fff;border-radius:20px;padding:14px 12px;text-align:right;font-family:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px;transition:transform .15s,border-color .15s}
+.h3-les:hover{transform:translateY(-2px);border-color:#C9BEFF}
+.h3-li{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:6px}
+.h3-les b{font-size:15px;color:var(--ink)}.h3-les small{font-size:12.5px;color:var(--soft)}
+.h3-bar,.ls-bar{height:5px;border-radius:5px;background:#EFEDF5;margin-top:8px;overflow:hidden}.h3-bar i,.ls-bar i{display:block;height:100%;border-radius:5px}
+.c1 .h3-li,.c1 .ls-ic{background:#EFEBFF}.c1 .h3-bar i,.c1 .ls-bar i{background:#5B43E0}
+.c2 .h3-li,.c2 .ls-ic{background:#FFF1CC}.c2 .h3-bar i,.c2 .ls-bar i{background:#E59F0B}
+.c3 .h3-li,.c3 .ls-ic{background:#DCEBFF}.c3 .h3-bar i,.c3 .ls-bar i{background:#2F7BEA}
+.pg-t{font-size:26px;margin:6px 2px 2px}.pg-s{color:var(--soft);margin:0 2px 16px}
+.ls-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;margin-bottom:12px;animation:up3 .45s both}
+.ls-card:nth-of-type(2){animation-delay:.06s}.ls-card:nth-of-type(3){animation-delay:.12s}
+.ls-top{display:flex;gap:14px;align-items:center}
+.ls-ic{flex:none;width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px}
+.ls-tx h2{margin:0;font-size:20px}.ls-tx h2 .en{font-size:14px;color:var(--soft);font-weight:500}.ls-tx p{margin:2px 0 0;color:var(--soft);font-size:14px}
+.ls-meta{display:flex;gap:14px;margin-top:14px;font-size:13px;color:var(--soft)}.ls-meta span:last-child{margin-right:auto;font-weight:600;color:var(--ink)}
+.ls-act{display:flex;gap:8px;margin-top:14px}.ls-act .btn{flex:1;margin:0;font-size:16px;padding:12px 10px;min-height:0;white-space:nowrap}
+.ls-rows{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:4px}
+.ls-row{width:100%;display:flex;align-items:center;gap:12px;padding:15px 16px;border:0;background:transparent;font-family:inherit;text-align:right;cursor:pointer}
+.ls-row+.ls-row{border-top:1px solid var(--line)}.ls-row:hover{background:#FAF9FD}
+.ls-row>span{font-size:22px}.ls-row b{font-size:15.5px;color:var(--ink)}.ls-row small{margin-right:auto;color:var(--soft);font-size:13px}.ls-row .ic{width:18px;height:18px;color:#B4B0C6}
+.prof-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.rail button.on{background:transparent;color:#5B43E0}
+.rail button.on .ic{stroke-width:2.4}
+@media(max-width:1099px){.rail{background:rgba(255,255,255,.96);backdrop-filter:blur(10px)}.rail button{min-height:54px}.rail button.on{position:relative}.rail button.on::before{content:"";position:absolute;top:0;width:28px;height:3px;border-radius:0 0 3px 3px;background:#5B43E0}}
+@media(min-width:1100px){.rail{width:96px}.rail button.on{background:#EFEBFF}}
+@media(max-width:420px){.h3-title{font-size:23px}.h3-wod b{font-size:23px}.h3-trip b{font-size:17px}.h3-lessons{gap:8px}.h3-les{padding:12px 10px}.h3-pill{padding:5px 9px;font-size:13px}}
+@media(max-width:350px){.h3-duo{grid-template-columns:1fr}.h3-lessons{grid-template-columns:1fr}}
+
+/* v3 travel */
+body[data-v="travel"] .screen,body[data-v="tstage"] .screen{max-width:680px}
+.thero{text-align:right;background:#FFE7DD;border-radius:26px;padding:20px;position:relative;overflow:hidden;margin-bottom:14px}
+.thero h1{font-size:26px;color:#7C2D12;font-weight:700}.thero p{font-size:15px;color:#9A3412;margin:4px 0 0;max-width:75%}
+.tplane{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:46px;animation:none}
+.tsearch input{border:1px solid var(--line);box-shadow:none;font-size:16px;padding:14px 18px;border-radius:16px}.tsearch input:focus{border-color:#A797FA;box-shadow:0 0 0 4px #EFEBFF}
+.ttabs{box-shadow:none;background:#ECEAF3;border-radius:14px;padding:4px;max-width:none}
+.ttabs button{font-size:15px;border-radius:11px;min-height:42px;padding:8px}
+.ttabs button.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(30,27,46,.12);font-weight:600}
+.troute{display:flex;flex-direction:column;gap:10px}
+.tline{display:none}
+.tstop{background:#fff;border:1px solid var(--line);box-shadow:none;border-radius:20px;padding:12px 14px}
+.tstop:hover{transform:translateY(-2px);border-color:#C9BEFF}
+.te2{position:relative;width:56px;height:56px;border-radius:16px;font-size:30px;display:flex;align-items:center;justify-content:center}
+.tnum{position:absolute;top:-6px;right:-6px;width:22px;height:22px;font-size:12px;font-weight:700;border:2px solid #fff;background:#5B43E0;color:#fff;font-family:Rubik,sans-serif}
+.tinfo b{font-size:16.5px}.tinfo small{font-size:13px;display:block;line-height:1.4}
+.tgo{color:#B4B0C6}.tgo .ic{width:20px;height:20px}.tgo.ok{width:28px;height:28px;border-radius:50%;background:#D1FAE5;color:#047857;display:flex;align-items:center;justify-content:center}.tgo.ok .ic{width:16px;height:16px;stroke-width:3}
+
+/* v3 global flat components */
+.btn{border-radius:16px!important;box-shadow:none!important;background:#5B43E0;color:#fff;font-weight:600;min-height:52px;font-size:17px;transition:transform .12s,background .15s}
+.btn:hover{background:#4A32C9}.btn:active{transform:scale(.98)}
+.btn.mint{background:#0F9F6E}.btn.mint:hover{background:#0B8A5F}
+.btn.yellow{background:#FFF1CC;color:#7A4B00}.btn.blue{background:#2F7BEA}
+.btn.ghost{background:#fff!important;color:var(--ink)!important;border:1px solid var(--line)!important}.btn.ghost:hover{background:#FAF9FD!important}
+.card{box-shadow:none!important;border:1px solid var(--line)!important;border-radius:24px!important}
+.sswitch{background:linear-gradient(#F6F5FB 75%,rgba(246,245,251,0))}
+.sswitch button{border:1px solid var(--line);font-size:14.5px;min-height:40px;padding:7px 14px}
+.sswitch button.on{background:var(--ink);border-color:var(--ink);box-shadow:none}
+.shead{border-radius:24px}.she{width:64px;height:64px;font-size:38px;background:rgba(255,255,255,.7);border-radius:18px;display:flex;align-items:center;justify-content:center}
+.pcard{border:1px solid var(--line);box-shadow:none;border-radius:20px}
+.pen{font-size:20px}.ptr{font-size:15.5px;color:#4A32C9}.phe{font-size:14px}
+.tool.ib{background:#F3F2F8;border-radius:12px}
+.wchip{border:1px solid var(--line);box-shadow:none;border-radius:18px}
+.wmain b{font-size:18px;max-width:100%;overflow-wrap:anywhere;padding:0 22px;text-align:center}
+.sec-t{font-size:18px}
+
+/* v3 map */
+.world{border-radius:26px!important;background:#fff!important;border:1px solid var(--line)!important;padding:18px 12px 22px}
+.world-title{font-size:18px}.world-sub{font-size:13px;color:var(--soft);opacity:1}
+.node{width:66px;height:66px;font-size:24px;font-weight:700;font-family:Rubik,sans-serif}
+.node.done{background:#5B43E0!important;box-shadow:none!important}
+.node.open{background:#fff!important;color:#5B43E0!important;border:3px solid #5B43E0!important;box-shadow:0 0 0 6px #EFEBFF!important}
+.node.locked{background:#F1F0F6!important;color:#B9B5C9!important;box-shadow:none!important;font-size:18px}
+.node-stars{font-size:15px;height:20px}
+.map-head{align-items:center}
+
+/* v3 play */
+body[data-v="play"] .screen{max-width:560px}
+.pbar{height:10px!important;background:#ECEAF3!important;border-radius:10px!important}.pbar i{background:#5B43E0!important;border-radius:10px!important}
+.ask{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px 18px;margin:10px 0 18px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ins{font-size:15px;color:var(--soft);text-align:center;margin-top:18px}
+.opts{gap:10px!important}
+.opt{border:1px solid #DDD9EA!important;box-shadow:0 2px 0 #E9E6F2!important;border-radius:16px!important;font-size:18px!important;min-height:58px}
+.opt:hover{border-color:#A797FA!important;background:#FBFAFF!important}
+
+/* owl */
+.owl{display:block}
+.h3-owl{position:absolute;left:14px;top:10px;width:86px;height:86px;filter:drop-shadow(0 6px 10px rgba(20,10,90,.35));animation:owlb 3.2s ease-in-out infinite}
+@keyframes owlb{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-4px) rotate(3deg)}}
+.h3-hero .h3-kick,.h3-hero .h3-title{padding-left:96px}
+.h3-hero::after{display:none}
+.owl-inline{display:inline-block;width:30px;height:30px;vertical-align:middle;margin-left:4px}
+.owl-hello{display:flex;align-items:center;gap:12px;justify-content:center;margin:6px auto 4px;max-width:420px}
+.owl-wel{width:84px;height:84px;flex:none}
+.owl-bub{background:#fff;border:1px solid var(--line);border-radius:18px 18px 18px 4px;padding:10px 14px;font-size:15px;color:var(--ink);text-align:right}
+.owl-res{width:120px;height:120px;margin:0 auto 6px;animation:owlb 2.6s ease-in-out infinite}
+.mascot .owl-m{width:56px;height:56px}
+@media(max-width:420px){.h3-owl{width:72px;height:72px;left:10px}.h3-hero .h3-kick,.h3-hero .h3-title{padding-left:78px}}
+
+.owl-head{display:flex;align-items:center;gap:10px;padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid var(--line)}
+.owl-hd{width:46px;height:46px;flex:none}.owl-head b{display:block;font-size:17px}.owl-head small{color:var(--soft);font-size:13px}
+.bsit{font-size:13px;font-weight:500;color:var(--soft);margin-top:2px}
+.owl-tip{margin-top:10px;background:#FFF7E0;color:#6B4A00;border-radius:12px;padding:8px 12px;font-size:14px}
+.owl-think .owl{animation:owlb 1s ease-in-out infinite}
+.chips-t{font-size:13px;color:var(--soft);margin-top:12px}.chips-t+.chips{margin-top:6px}
 </style>
 </head>
 <body>
@@ -1019,14 +1173,14 @@ const slowBtn=(t,cls)=>`<button class="tool slowt ${cls||""}" data-a="slow" data
 let VIEW={name:"home"}, SES=null, RES=null, TIMER=null, STUDY_I=0, WEL_G=S.gender, WEL_GOAL=S.goal||"";
 const GOALS=[{k:"travel",e:"✈️",t:"לטיולים בחו״ל",rec:"travel"},{k:"school",e:"🎓",t:"ללימודים",rec:"grammar"},{k:"work",e:"💼",t:"לעבודה",rec:"sentences"},{k:"fun",e:"🌍",t:"סתם כי כיף",rec:"words"}];
 function go(name,opts){closeBig();const pb=$("#pushes");if(pb&&name!=="home"){pb.innerHTML="";PUSHQ=[];clearTimeout(PUSHT);PUSHT=null;}if(name!=="play")stopTimer();if(HAS_TTS&&name!=="play")speechSynthesis.cancel();VIEW=Object.assign({name},opts||{});render();window.scrollTo(0,0);}
-function backTarget(){const v=VIEW.name;if(v==="map"||v==="profile"||v==="fav"||v==="placement"||v==="travel")return ["home"];if(v==="tstage")return ["travel"];if(v==="study"||v==="intro"||v==="rule")return ["map",{sec:VIEW.sec}];
+function backTarget(){const v=VIEW.name;if(v==="lessons")return ["home"];if(v==="map")return ["lessons"];if(v==="profile"||v==="fav"||v==="placement"||v==="travel")return ["home"];if(v==="tstage")return ["travel"];if(v==="study"||v==="intro"||v==="rule")return ["map",{sec:VIEW.sec}];
   if(v==="play"||v==="result"){const s=(SES||RES||{});if(s.mode==="travel")return ["tstage",{ts:s.ts}];return (s.mode==="level"||s.mode==="timer"||s.mode==="spell")?["map",{sec:s.sec}]:["home"];}return ["home"];}
 function rail(){const v=VIEW.name;const on=n=>n.includes(v)?"on":"";
- return `<nav class="rail" aria-label="ניווט"><button class="${on(["home","map","study","intro","rule"])}" data-a="home">${I.home}<span>בית</span></button><button class="tv ${on(["travel","tstage"])}" data-a="travel">${I.globe}<span>חו״ל</span></button><button class="${on(["fav"])}" data-a="favs">${I.book}<span>שמורים</span></button><button data-a="review">${I.redo}<span>חזרה</span></button><button class="${on(["profile"])}" data-a="profile">${I.user}<span>פרופיל</span></button></nav>`;}
-function render(){const v=VIEW.name;const body=SCREENS[v]();const hasRail=!["welcome","placement","play"].includes(v);document.body.classList.toggle("has-rail",hasRail);
-  $("#app").innerHTML=(v==="welcome"?"":topbar())+(hasRail?rail():"")+`<div class="screen">${body}</div>`+(v==="play"?"":`<footer>© 2026 אפרת צפתי · כל הזכויות שמורות · אין להעתיק או להפיץ ללא אישור</footer>`);
+ return `<nav class="rail" aria-label="ניווט"><button class="${on(["home"])}" data-a="home">${I.home}<span>בית</span></button><button class="${on(["lessons","map","study","intro","rule","result"])}" data-a="lessons">${I3.layers}<span>שיעורים</span></button><button class="${on(["travel","tstage"])}" data-a="travel">${I3.plane}<span>חו״ל</span></button><button class="${on(["profile","fav"])}" data-a="profile">${I.user}<span>אני</span></button></nav>`;}
+function render(){const v=VIEW.name;const body=SCREENS[v]();const hasRail=!["welcome","placement","play"].includes(v);document.body.classList.toggle("has-rail",hasRail);document.body.dataset.v=v;
+  $("#app").innerHTML=(v==="welcome"||v==="home"?"":topbar())+(hasRail?rail():"")+`<div class="screen">${body}</div>`+(v==="play"?"":`<footer>© 2026 אפרת צפתי · כל הזכויות שמורות · אין להעתיק או להפיץ ללא אישור</footer>`);
   if(AFTER[v])AFTER[v]();}
-function topbar(){const r=rank();const title={home:"",travel:"אנגלית לחו״ל",tstage:"אנגלית לחו״ל",placement:"מבחן רמה",map:SECTIONS[VIEW.sec]?.t,study:"מכירים את המילים",intro:SECTIONS[VIEW.sec]?.t||"",rule:"החוק של היום",play:"",result:"",profile:"הפרופיל שלי",fav:"המילים המועדפות"}[VIEW.name]||"";
+function topbar(){const r=rank();const title={home:"",lessons:"",travel:"אנגלית לחו״ל",tstage:"אנגלית לחו״ל",placement:"מבחן רמה",map:SECTIONS[VIEW.sec]?.t,study:"מכירים את המילים",intro:SECTIONS[VIEW.sec]?.t||"",rule:"החוק של היום",play:"",result:"",profile:"הפרופיל שלי",fav:"המילים המועדפות"}[VIEW.name]||"";
   const back=(VIEW.name==="home"||(VIEW.name==="placement"&&!S.placed))?`<span style="width:46px"></span>`:`<button class="icon-btn" data-a="back" aria-label="חזרה">${I.back}</button>`;
   return `<div class="topbar"><div class="tb-side">${back}</div><div class="tb-mid">${VIEW.name==="home"?`<button class="brand" data-a="home" aria-label="English School">${LOGO}<span class="en">English School</span></button>`:title}</div><div class="tb-side">
    <span class="chip fire" title="ימים ברצף">🔥 ${curStreak()}</span>
@@ -1047,6 +1201,7 @@ function isoLatin(root){if(!root)return;const HE=/[֐-׿]/,LA=/[A-Za-z]/;
 const enWrap=s=>s.replace(/[A-Za-z][A-Za-z0-9 ,:'’\/+.\-()]*[A-Za-z0-9.)]|[A-Za-z]/g,m=>`<span class="en">${m}</span>`);
 SCREENS.welcome=()=>`<div class="splash2"><div class="sp-logo">${LOGO}</div>
  ${rainbowTitle(true)}
+ <div class="owl-hello">${OWL("owl-wel","cheer")}<div class="owl-bub">היי! אני <b>ינשופי</b> 👋 אלווה אותך בכל שיעור.</div></div>
  <p class="sp-lead">אנגלית ב־5 דקות ביום: מילים, משפטים, דקדוק, ואנגלית לטיול בחו״ל.</p>
  <ul class="sp-list"><li>${I.check} מותאם לרמה שלך אחרי מבחן קצר</li><li>${I.check} שומעים כל מילה בהגייה נכונה, גם לאט</li><li>${I.check} משפטים מוכנים לטיסה, למלון ולמסעדה</li></ul>
  <div class="card join">
@@ -1065,15 +1220,58 @@ function greetWord(){const h=new Date().getHours();return h<5?"לילה טוב":
 function wordOfDay(){const pool=ORDER.slice(0,160).filter(w=>EMO[w.en]);const d=today();let h=0;for(const c of d)h=(h*33+c.charCodeAt(0))%100003;return pool[h%pool.length];}
 function nextLevel(sec){const s=SECTIONS[sec];const st0=Math.min(S.start[sec]||0,s.n-1);for(let i=st0;i<s.n;i++)if(unlocked(sec,i)&&!starsOf(sec,i))return i;for(let i=0;i<s.n;i++)if(unlocked(sec,i)&&starsOf(sec,i)<3)return i;return st0;}
 function ring(pct,size,col,inner){const r=size/2-7,c=2*Math.PI*r;return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-hidden="true"><circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="#F1E8F5" stroke-width="9"/><circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="${col}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-Math.min(1,pct))}" transform="rotate(-90 ${size/2} ${size/2})" style="transition:stroke-dashoffset 1s"/><text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-size="${size/4.2}" font-family="Fredoka,sans-serif" fill="#2C223B">${inner}</text></svg>`;}
-SCREENS.home=()=>{
- const dc=Math.min(dailyCount(),GOAL), sec=S.lastSec||"words", lv=nextLevel(sec), w=wordOfDay();
- const tile=(k,ic,tint,sub,act)=>{const s=SECTIONS[k];const pct=s?Math.round(secStars(k)/(s.n*3)*100):Math.round(Object.keys(S.tdone).length/TRAVEL.length*100);
-   const rec=(GOALS.find(g=>g.k===S.goal)||{}).rec===k;return `<button class="tile2 ${rec?"rec":""}" data-a="${act||"sec"}" data-sec="${k}">${rec?`<span class="rec-tag">מומלץ לך</span>`:""}<span class="t-ic" style="background:${tint}">${ic}</span><b>${s?s.t:"אנגלית לחו״ל"}</b><small>${sub}</small><span class="t-bar"><i style="width:${pct}%"></i></span></button>`;};
- const motto=dc>=GOAL?"השלמת את היעד של היום 🎉":dc?`עוד ${GOAL-dc} מילים ליעד היומי`:`היעד של היום: ${GOAL} מילים, בערך 5 דקות`;
- return `<div class="h-greet"><div><div class="h-hi">${greetWord()}, ${esc(S.name)}</div><div class="h-sub">${motto}</div></div><div class="hh-ring" title="היעד היומי">${ring(dc/GOAL,74,dc>=GOAL?"#12A150":"#6C4CF1",`${dc}/${GOAL}`)}</div></div>
- <button class="cta2" data-a="level" data-sec="${sec}" data-lv="${lv}"><span class="cta2-ic">${I.play}</span><span><b>${dc||secStars(sec)?"ממשיכים ללמוד":"מתחילים ללמוד"}</b><small>${SECTIONS[sec].t} · רמה ${lv+1}</small></span><span class="cta2-arrow">‹</span></button>
- <div class="tiles">${tile("words","🔤","#EFEBFF","מילים חדשות עם קול")}${tile("sentences","💬","#FFF4D6","משלימים משפטים")}${tile("grammar","✏️","#E6F0FF","חוקים פשוטים")}${tile("travel","✈️","#E6F6EE","לטיסה, למלון ולמסעדה","travel")}</div>
- <div class="wod2"><span class="we">${EMO[w.en]}</span><div class="wt"><small>מילת היום</small><b class="en">${w.en}</b> <span class="muted">· ${w.he} · ${w.tr}</span></div>${sayBtn(w.en,"mini")}${favBtn(w.id,"mini")}</div>`;};
+function OWL(cls="",mood=""){const happy=mood==="happy",cheer=mood==="cheer";
+ const eyes=happy?`<path d="M30 47q8-9 16 0M54 47q8-9 16 0" fill="none" stroke="#1E1B2E" stroke-width="4" stroke-linecap="round"/>`
+  :`<circle cx="38" cy="47" r="12" fill="#fff"/><circle cx="62" cy="47" r="12" fill="#fff"/><circle cx="40" cy="48" r="6.5" fill="#1E1B2E"/><circle cx="60" cy="48" r="6.5" fill="#1E1B2E"/><circle cx="42.5" cy="45.5" r="2.2" fill="#fff"/><circle cx="62.5" cy="45.5" r="2.2" fill="#fff"/>`;
+ const wings=cheer?`<path d="M20 58q-14-10-10-28q8 8 16 20z" fill="#6A52E6"/><path d="M80 58q14-10 10-28q-8 8-16 20z" fill="#6A52E6"/>`
+  :`<path d="M19 55q-6 14 4 26q4-12 3-24z" fill="#6A52E6"/><path d="M81 55q6 14-4 26q-4-12-3-24z" fill="#6A52E6"/>`;
+ return `<svg class="owl ${cls}" viewBox="0 0 100 100" aria-hidden="true">${wings}
+ <path d="M22 34l2-16 12 10M78 34l-2-16-12 10" fill="#8B74F5"/>
+ <path d="M50 22c-20 0-31 13-31 33 0 20 13 34 31 34s31-14 31-34c0-20-11-33-31-33z" fill="#8B74F5"/>
+ <path d="M50 58c-11 0-17 8-17 16s7 13 17 13 17-5 17-13-6-16-17-16z" fill="#F1EDFF"/>
+ <path d="M43 70q3 3 6 0M51 70q3 3 6 0M47 77q3 3 6 0" fill="none" stroke="#C9BEFF" stroke-width="2" stroke-linecap="round"/>
+ ${eyes}<path d="M46 56l4 6 4-6z" fill="#FFB020"/>
+ <path d="M40 89h7M53 89h7" stroke="#FFB020" stroke-width="4" stroke-linecap="round"/>
+ <path d="M28 22l22-10 22 10-22 9z" fill="#1E1B2E"/><path d="M36 25v6q14 6 28 0v-6l-14 6z" fill="#2E2944"/><path d="M72 22v12" stroke="#FFC83D" stroke-width="2.2"/><circle cx="72" cy="35" r="2.6" fill="#FFC83D"/></svg>`;}
+const I3={layers:IC('<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>'),plane:IC('<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>'),bot:IC('<path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/>'),chev:IC('<polyline points="15 18 9 12 15 6"/>'),arrow:IC('<line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>')};
+function planState(){const dc=Math.min(dailyCount(),GOAL),due=dueWords().length;
+ let sec=S.lastSec;if(!sec||!SECTIONS[sec]){const r=(GOALS.find(g=>g.k===S.goal)||{}).rec;sec=SECTIONS[r]?r:"words";}
+ const lv=nextLevel(sec),tnext=Math.max(0,TRAVEL.findIndex((x,i)=>!S.tdone[i]));
+ const steps=[
+  {k:1,t:`${SECTIONS[sec].t} · רמה ${lv+1}`,s:`${dc}/${GOAL} מילים ליעד היומי`,done:dc>=GOAL,act:()=>ACT.level({sec,lv})},
+  {k:2,t:due?`חזרה על ${due} מילים`:"חזרה חכמה",s:due?"כדי שהמילים יישארו בראש":dc?"אין מה לחזור כרגע":"נפתח אחרי השיעור הראשון",done:!due&&dc>0,act:()=>due?ACT.review():ACT.level({sec,lv})},
+  {k:3,t:"משפט אחד לחו״ל",s:`${TRAVEL[tnext].e} ${TRAVEL[tnext].t}`,done:S.tday===today(),act:()=>go("tstage",{ts:tnext})}];
+ return {dc,due,sec,lv,steps,next:steps.find(x=>!x.done)};}
+SCREENS.home=()=>{const P=planState(),w=wordOfDay(),allDone=!P.next;
+ const stars=secStars("words")+secStars("sentences")+secStars("grammar"),tdone=Object.keys(S.tdone).length;
+ const title=allDone?"סיימת את היום! 🎉":P.dc?"ממשיכים בתנופה 💪":`מוכנ${G("ה","")} להתחיל?`;
+ const step=x=>`<button class="pl-step ${x.done?"done":""} ${P.next===x?"cur":""}" data-a="plan" data-k="${x.k}"><span class="pl-dot">${x.done?I.check:x.k}</span><span class="pl-tx"><b>${x.t}</b><small>${x.s}</small></span></button>`;
+ const lesson=(k,ic,cls)=>{const s=SECTIONS[k],pct=Math.round(secStars(k)/(s.n*3)*100);return `<button class="h3-les ${cls}" data-a="sec" data-sec="${k}"><span class="h3-li">${ic}</span><b>${s.t}</b><small>רמה ${nextLevel(k)+1}</small><span class="h3-bar"><i style="width:${Math.max(pct,3)}%"></i></span></button>`;};
+ return `<div class="h3">
+ <header class="h3-top"><div class="h3-me"><button class="h3-av" data-a="profile" aria-label="הפרופיל שלי">${esc((S.name||"?").trim().charAt(0))}</button><div><small>${greetWord()}</small><b>${esc(S.name)}</b></div></div>
+  <div class="h3-pills"><span class="h3-pill fire" title="ימים ברצף">🔥 ${curStreak()}</span><span class="h3-pill star" title="כוכבים">⭐ ${stars}</span><button class="h3-mute" data-a="mute" aria-label="${S.mute?"הפעלת צלילים":"השתקה"}">${S.mute?I.mute:I.vol}</button></div></header>
+ <section class="h3-hero">
+  ${OWL("h3-owl",allDone?"cheer":"")}<div class="h3-hin"><div class="h3-kick">ינשופי הכין לך תוכנית · כ־5 דקות</div><h1 class="h3-title">${title}</h1>
+  <div class="pl-box">${P.steps.map(step).join("")}</div>
+  <button class="h3-go" data-a="plan" data-k="${allDone?1:P.next.k}">${allDone?"עוד סיבוב":"ממשיכים"} ${I3.arrow}</button></div></section>
+ <div class="h3-duo">
+  <div class="h3-wod"><small>מילת היום</small><b class="en">${w.en}</b><span>${w.he} · ${w.tr}</span><div class="h3-wodb"><button class="h3-round" data-a="say" data-t="${esc(w.en)}" aria-label="השמעה">${I.vol}</button>${favBtn(w.id,"h3-round")}</div><span class="h3-emo" aria-hidden="true">${EMO[w.en]||""}</span></div>
+  <button class="h3-trip" data-a="travel"><small>טסים בקרוב?</small><b>אנגלית לחו״ל</b><span>${tdone}/${TRAVEL.length} תחנות בדרך</span>
+   <svg class="h3-sky" viewBox="0 0 160 70" aria-hidden="true"><rect x="6" y="34" width="18" height="36" rx="2" fill="#F6B49A"/><rect x="28" y="18" width="20" height="52" rx="2" fill="#E9835F"/><rect x="52" y="40" width="16" height="30" rx="2" fill="#F6B49A"/><rect x="72" y="8" width="18" height="62" rx="2" fill="#F8CDBB"/><rect x="94" y="28" width="22" height="42" rx="2" fill="#E9835F"/><path d="M118 22l26-10-6 8 10 3-4 3-12-2-8 6z" fill="#C4552F"/></svg></button>
+ </div>
+ <button class="h3-bot" data-a="bot"><span class="h3-bi">${I3.bot}</span><span class="h3-btx"><b>איך אומרים...?</b><small>כותבים בעברית, הבוט עונה באנגלית עם הגייה</small></span><span class="h3-chev">${I3.chev}</span></button>
+ <h2 class="h3-sec">השיעורים שלך</h2>
+ <div class="h3-lessons">${lesson("words","🔤","c1")}${lesson("sentences","💬","c2")}${lesson("grammar","✏️","c3")}</div>
+ </div>`;};
+SCREENS.lessons=()=>{const card=(k,ic,cls,desc)=>{const s=SECTIONS[k],st=secStars(k),pct=Math.round(st/(s.n*3)*100),lv=nextLevel(k);
+  return `<div class="ls-card ${cls}"><div class="ls-top"><span class="ls-ic">${ic}</span><div class="ls-tx"><h2>${s.t} <span class="en">${s.en}</span></h2><p>${desc}</p></div></div>
+  <div class="ls-meta"><span>הרמה הבאה: ${lv+1} מתוך ${s.n}</span><span>⭐ ${st}/${s.n*3}</span><span>${pct}%</span></div><div class="ls-bar"><i style="width:${Math.max(pct,2)}%"></i></div>
+  <div class="ls-act"><button class="btn" data-a="level" data-sec="${k}" data-lv="${lv}">${st?"ממשיכים":"מתחילים"}</button><button class="btn ghost" data-a="sec" data-sec="${k}">כל הרמות</button></div></div>`;};
+ const due=dueWords().length,nf=Object.keys(S.fav).length;
+ return `<h1 class="pg-t">השיעורים</h1><p class="pg-s">בוחרים נושא וממשיכים מהרמה שעצרת בה.</p>
+ ${card("words","🔤","c1","מילים חדשות עם תמונה וקול")}${card("sentences","💬","c2","משלימים משפטים מהחיים")}${card("grammar","✏️","c3","חוקים קצרים ותרגול")}
+ <div class="ls-rows"><button class="ls-row" data-a="review"><span>🧠</span><b>חזרה חכמה</b><small>${due?`${due} מילים מחכות`:"אין מילים לחזרה"}</small>${I3.chev}</button>
+ <button class="ls-row" data-a="favs"><span>🔖</span><b>המילים ששמרתי</b><small>${nf} מילים</small>${I3.chev}</button></div>`;};
 AFTER.home=()=>{schedulePushes();};
 /* ---------- in-app push notifications ---------- */
 let PUSHED=false,PUSHQ=[],PUSHT=null;
@@ -1141,13 +1339,13 @@ AFTER.play=()=>{const q=SES.cur;if(q.kind==="spell"){const f=$("#spf"),inp=$("#s
  if(SES.mode==="timer"&&!TIMER)startClock();};
 
 SCREENS.result=()=>{const r=RES;
- if(r.mode==="timer")return `<div class="card result"><div style="font-size:80px">⏱️</div><h1>${r.score} תשובות נכונות!</h1>
+ if(r.mode==="timer")return `<div class="card result">${OWL("owl-res","cheer")}<h1>${r.score} תשובות נכונות!</h1>
    <p style="font-size:20px">${r.newBest?"🎉 שיא חדש! ":""}השיא שלך: ${S.best[r.sec]}</p>
-   <div class="mascot-line"><span class="mascot">${LOGO}</span><div class="bubble">${r.score>=15?`מהירות של אלופ${G("ה","")}!`:r.score>=8?"יופי של מהירות! נסו לשבור את השיא":"כל אתגר משפר את המהירות. עוד פעם?"}</div></div>
+   <div class="mascot-line"><span class="mascot">${OWL("owl-m")}</span><div class="bubble">${r.score>=15?`מהירות של אלופ${G("ה","")}!`:r.score>=8?"יופי של מהירות! נסו לשבור את השיא":"כל אתגר משפר את המהירות. עוד פעם?"}</div></div>
    <div class="row"><button class="btn" data-a="timer" data-sec="${r.sec}">שוב! 🔁</button><button class="btn ghost" data-a="back">למפה</button></div></div>`;
  const mist=r.wrong.length?`<div class="mistakes"><h2 class="sec-t">מילים לחזור עליהן 💡</h2><div class="wlist">${r.wrong.map(w=>`<div class="witem">${sayBtn(w.en,"mini")}<span class="sp2"><b class="en">${esc(w.en)}</b><br>${w.he}</span>${w.id!=null?favBtn(w.id,"mini"):""}</div>`).join("")}</div></div>`:"";
- if(r.mode==="travel")return `<div class="card result"><div style="font-size:80px">${r.pct>=80?"✈️":"💪"}</div><h1>${r.first} מתוך ${r.total} בפעם הראשונה</h1><p style="font-size:19px">${r.pct>=80?`מוכנ${G("ה","")} לטיול, ${esc(S.name)}! 🧳`:"עוד תרגול קטן ואת"+G("","ה")+" מוכנ"+G("ה","")+" לטיסה 🌱"}</p>${mist}<div class="row" style="margin-top:16px"><button class="btn" data-a="tquiz" data-ts="${r.ts}">שוב 🔁</button><button class="btn ghost" data-a="tstage" data-ts="${r.ts}">חזרה לשלב</button><button class="btn ghost" data-a="travel">למסלול הטיול</button></div></div>`;
- if(r.mode!=="level")return `<div class="card result"><div style="font-size:80px">${r.pct>=80?"🏆":"💪"}</div><h1>${r.first} מתוך ${r.total} בפעם הראשונה</h1>
+ if(r.mode==="travel")return `<div class="card result">${OWL("owl-res",r.pct>=80?"cheer":"happy")}<h1>${r.first} מתוך ${r.total} בפעם הראשונה</h1><p style="font-size:19px">${r.pct>=80?`מוכנ${G("ה","")} לטיול, ${esc(S.name)}! 🧳`:"עוד תרגול קטן ואת"+G("","ה")+" מוכנ"+G("ה","")+" לטיסה 🌱"}</p>${mist}<div class="row" style="margin-top:16px"><button class="btn" data-a="tquiz" data-ts="${r.ts}">שוב 🔁</button><button class="btn ghost" data-a="tstage" data-ts="${r.ts}">חזרה לשלב</button><button class="btn ghost" data-a="travel">למסלול הטיול</button></div></div>`;
+ if(r.mode!=="level")return `<div class="card result">${OWL("owl-res",r.pct>=80?"cheer":"happy")}<h1>${r.first} מתוך ${r.total} בפעם הראשונה</h1>
    <p style="font-size:19px">${r.pct>=80?`כל הכבוד, ${esc(S.name)}!`:"כל חזרה מחזקת את הזיכרון 🌱"}</p>${mist}<div class="row" style="margin-top:16px">${r.mode==="spell"?`<button class="btn" data-a="spell-again">✍️ שוב כתיב</button><button class="btn ghost" data-a="back">למפה</button>`:`<button class="btn" data-a="home">לדף הבית 🏠</button>`}</div></div>`;
  const s=r.stars,title=s===3?`מושלם, ${esc(S.name)}! 🎉`:s===2?`כל הכבוד, ${esc(S.name)}!`:s===1?"עברת את הרמה! 👏":"כמעט! ננסה שוב? 💪";
  const hasNext=s>=1&&r.lv+1<SECTIONS[r.sec].n;
@@ -1165,7 +1363,7 @@ AFTER.result=()=>{const r=RES;setTimeout(()=>{const dc=dailyCount();if(dc<GOAL&&
 
 SCREENS.placement=()=>{
  if(PT.i<0)return `${rainbowTitle()}<div class="banner"><div><b>🔔 לפני שמתחילים: מבחן רמה קצר</b><small>${PLACEMENT.length} שאלות, 2–3 דקות. מהקל לקשה. אין ציון ואין לחץ!</small></div></div>
-  <div class="card center"><div class="mascot-line"><span class="mascot">${LOGO}</span><div class="bubble">היי ${esc(S.name)}! אני רוצה להכיר אותך. ענו על כמה שאלות, ואני אתאים לכם את נקודת ההתחלה. אם לא יודעים, פשוט מנחשים 😊</div></div>
+  <div class="card center"><div class="mascot-line"><span class="mascot">${OWL("owl-m")}</span><div class="bubble">היי ${esc(S.name)}! אני רוצה להכיר אותך. ענו על כמה שאלות, ואני אתאים לכם את נקודת ההתחלה. אם לא יודעים, פשוט מנחשים 😊</div></div>
   <button class="btn wide" data-a="pt-start" style="max-width:380px">יאללה, מתחילים את המבחן 🚀</button></div>`;
  if(PT.done){const b=BANDS[S.band];
   return `<div class="card result"><div style="font-size:80px">${b.e}</div><h1>הרמה שלך: ${b.t}</h1><div class="band">${PT.score} מתוך ${PLACEMENT.length} נכונות</div>${PT.early?`<p class="muted small">עצרנו מוקדם כדי לחסוך לך שאלות קשות מדי. זה בסדר גמור 💜</p>`:""}
@@ -1186,6 +1384,7 @@ SCREENS.profile=()=>{const r=rank(),n=learnedCount();const nx=r.next;const pct=n
  return `<div class="card rank-big"><div class="re">${r.e}</div><h1 style="margin:0">${esc(S.name)}</h1><div style="font-size:20px">הדרגה שלך: <b>${r.name}</b></div>
  ${nx?`<div class="goal-bar" style="margin:14px auto 6px;max-width:380px"><i style="width:${pct}%"></i></div><div class="muted">עוד ${nx[0]-n} מילים לדרגה ${nx[1]} ${G(nx[2],nx[3])}</div>`:`<div style="margin-top:10px">הגעת לדרגה הכי גבוהה! 👑</div>`}
  <div class="row" style="margin-top:12px;font-size:22px">${RANKS.map(x=>`<span title="${G(x[2],x[3])}" style="opacity:${n>=x[0]?1:.3}">${x[1]}</span>`).join(" ← ")}</div></div>
+ <div class="prof-links"><button class="ls-row" style="border:1px solid var(--line);border-radius:18px;background:#fff" data-a="favs"><span>🔖</span><b>המילים ששמרתי</b></button><button class="ls-row" style="border:1px solid var(--line);border-radius:18px;background:#fff" data-a="review"><span>🧠</span><b>חזרה חכמה</b></button></div>
  <div class="stats"><div class="stat"><b>${n}</b>מילים שלמדתי</div><div class="stat"><b>${totalStars}</b>⭐ כוכבים</div><div class="stat"><b>${curStreak()}</b>🔥 ימים ברצף</div><div class="stat"><b>${Math.max(S.best.words,S.best.sentences,S.best.grammar)}</b>⏱️ שיא 60 שניות</div></div>
  <div class="card"><h2 class="sec-t">🏆 ארון הגביעים (${Object.keys(S.trophies).length}/${TROPHIES.length})</h2><div class="troph">${TROPHIES.map(t=>`<div class="tro ${S.trophies[t.id]?"got":""}"><div class="te">${t.e}</div><b>${t.t}</b><small>${t.d}</small></div>`).join("")}</div></div>
  <div class="row"><button class="btn ghost" data-a="retest">📝 מבחן רמה חוזר</button><button class="btn ghost" data-a="rename">✏️ שינוי שם</button><button class="btn ghost" data-a="reset">🗑️ איפוס התקדמות</button></div>`;};
@@ -1294,14 +1493,14 @@ SCREENS.travel=()=>{const tab=VIEW.tab||"route";
  const head=`<div class="thero"><div class="tplane">✈️</div><h1>אנגלית לחו״ל</h1><p>מה צריך להגיד עכשיו? מחפשים, לוחצים ושומעים.</p></div>`;
  if(tab==="bot")return head+travelTabs(tab)+botHTML();
  return head+`<div class="tsearch"><input id="tsq" type="search" autocomplete="off" placeholder="🔍 חפשו: חשבון, מונית, מים, מגבת..." aria-label="חיפוש משפט"><div id="tres"></div></div>`+travelTabs(tab)+
-  `<div class="troute">${TRAVEL.map((s,i)=>`<button class="tstop" data-a="tstage" data-ts="${i}" style="background:${s.c}"><span class="tnum">${i+1}</span><span class="te2">${s.e}</span><span class="tinfo"><b>${s.t}</b><small>${s.d}</small></span><span class="tgo">${S.tdone[i]?"✅":"←"}</span></button>${i<TRAVEL.length-1?'<div class="tline"></div>':""}`).join("")}</div>`;};
+  `<div class="troute">${TRAVEL.map((s,i)=>`<button class="tstop" data-a="tstage" data-ts="${i}"><span class="te2" style="background:${s.c}">${s.e}<span class="tnum">${i+1}</span></span><span class="tinfo"><b>${s.t}</b><small>${s.d}</small></span><span class="tgo ${S.tdone[i]?"ok":""}">${S.tdone[i]?I.check:I3.chev}</span></button>${i<TRAVEL.length-1?'<div class="tline"></div>':""}`).join("")}</div>`;};
 SCREENS.tstage=()=>{const i=VIEW.ts,s=TRAVEL[i];
  return `<div class="sswitch" role="tablist">${TRAVEL.map((x,j)=>`<button class="${j===i?"on":""}" data-a="tstage" data-ts="${j}" aria-selected="${j===i}">${x.e} ${TSHORT[j]}</button>`).join("")}</div>
  <div class="shead" style="background:${s.c}"><span class="she">${s.e}</span><div style="flex:1;min-width:0"><div class="muted small">שלב ${i+1} מתוך ${TRAVEL.length}</div><h1>${s.t}</h1><div class="tip">👆 לוחצים על משפט ושומעים · 📱 מראים לצד השני</div></div></div>
  <h2 class="sec-t">💬 המשפטים שהכי צריך</h2><div class="pgrid">${s.p.map((p,k)=>pCard(p,tKey(i,s.w.length+k))).join("")}</div>
  <h2 class="sec-t" style="margin-top:22px">🔤 מילים חשובות</h2><div class="wgrid">${s.w.map((w,k)=>wChip(w,tKey(i,k))).join("")}</div>
  <div class="row" style="margin-top:22px"><button class="btn mint" data-a="tquiz" data-ts="${i}">🎮 תרגול מהיר (דקה)</button>${i<TRAVEL.length-1?`<button class="btn" data-a="tstage" data-ts="${i+1}">לשלב הבא: ${TRAVEL[i+1].e} ${TSHORT[i+1]} ←</button>`:`<button class="btn" data-a="ttab" data-tab="route">🏁 סיימנו את הטיול!</button>`}</div>`;};
-AFTER.tstage=()=>{const on=document.querySelector(".sswitch .on");on&&on.scrollIntoView({inline:"center",block:"nearest"});};
+AFTER.tstage=()=>{if(S.tday!==today()){S.tday=today();save();}const on=document.querySelector(".sswitch .on");on&&on.scrollIntoView({inline:"center",block:"nearest"});};
 function showBig(key){const it=tItem(key);if(!it)return;closeBig();const o=document.createElement("div");o.id="bigshow";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
  o.innerHTML=`<div class="bs-in"><div class="bs-top">👇 מראים את המסך לצד השני</div><div class="bs-en en">${esc(it.en)}</div><div class="bs-he">${esc(it.he)}</div><div class="row"><button class="btn blue" data-a="say" data-t="${esc(it.en)}">🔊 השמעה</button><button class="btn ghost" data-a="close-show">סגירה ✕</button></div></div>`;
  document.body.appendChild(o);if(!S.mute)speak(it.en);o.querySelector('[data-a="close-show"]').focus();}
@@ -1342,34 +1541,37 @@ function botPlace(text){const n=normHe(text);
   ren:"Sure. Get in, please.",rhe:"בטח, בבקשה לעלות.",ben:"How long does it take?",btr:"הָאוּ לוֹנג דָאז אִיט טֵייק?",bhe:"כמה זמן זה לוקח?"};}
 /* answers saved from Claude or templates live in S.tai */
 function aiKey(o){let h=0;const s=o.en;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return "a:"+(h>>>0).toString(36);}
-function answerCard(b,key,head){return `<div class="bmsg bot"><div class="bq">${head||"🤖 "+esc(b.q||"")}</div>
+const OWL_TIPS=[()=>`אם לא הבינו אותך, תגיד${G("י","")} <span class="en">Sorry?</span> ויחזרו לאט.`,()=>`לפני כל בקשה כדאי להוסיף <span class="en">Excuse me</span>, זה נשמע מנומס.`,()=>`<span class="en">please</span> ו־<span class="en">thank you</span> פותחים כל דלת בחו״ל.`,()=>`אפשר ללחוץ על 📱 ולהראות את המשפט על המסך.`,()=>`מדבר${G("ת","")} מהר מדי? <span class="en">Slowly, please</span>.`,()=>`לא חייבים מבטא מושלם. העיקר לנסות 💪`];
+const OWL_WAIT=["ינשופי מחפש את המילים הנכונות…","רגע, מסדר את הנוצות… 🪶","הוּ-הוּ, חושב…"];
+function owlTip(key){let h=0;for(const c of String(key))h=(h*31+c.charCodeAt(0))>>>0;return OWL_TIPS[h%OWL_TIPS.length]();}
+function answerCard(b,key,head){return `<div class="bmsg bot"><div class="bq">${head||`${OWL("owl-inline")} הנה, תגיד${G("י","")} ככה 👇`}<div class="bsit">${esc(b.q||"")}</div></div>
  <div class="brow"><div class="blbl">1. אומרים כך באנגלית</div><div class="ben en">${esc(b.en)}</div><div class="tools">${sayBtn(b.en,"mini")}${slowBtn(b.en,"mini")}<button class="tool mini" data-a="show" data-k="${key}" aria-label="להראות לצד השני" title="להראות לצד השני">📱</button>${tfavBtn(key,"mini")}</div></div>
- <div class="brow"><div class="blbl">2. קוראים כך</div><div class="btr">${esc(b.tr)}</div><div class="muted">${esc(b.he)}</div>${b.note?`<div class="small" style="margin-top:6px">💡 ${esc(b.note)}</div>`:""}</div>
+ <div class="brow"><div class="blbl">2. קוראים כך</div><div class="btr">${esc(b.tr)}</div><div class="muted">${esc(b.he)}</div>${b.note?`<div class="small" style="margin-top:6px">🦉 ${esc(b.note)}</div>`:""}</div>
  <div class="brow"><div class="blbl">3. מה עונים לך בדרך כלל</div><div class="en bmid">${esc(b.ren)} ${sayBtn(b.ren,"mini")}</div><div class="muted">${esc(b.rhe)}</div>
-  <div class="blbl" style="margin-top:10px">↩️ ואז אפשר לענות</div><div class="en bmid">${esc(b.ben)} ${sayBtn(b.ben,"mini")}</div><div class="btr small">${esc(b.btr)}</div><div class="muted">${esc(b.bhe)}</div></div></div>`;}
-function botAnswerHTML(i,low){return answerCard(BOT[i],"b:"+i,low?`🤔 לא בטוח שהבנתי בדיוק. זה המצב הכי קרוב שמצאתי: <u>${BOT[i].q}</u><div class="small muted" style="font-weight:normal;margin-top:4px">אם זה לא מה שהתכוונת, נסו לנסח אחרת.</div>`:null);}
+  <div class="blbl" style="margin-top:10px">↩️ ואז אפשר לענות</div><div class="en bmid">${esc(b.ben)} ${sayBtn(b.ben,"mini")}</div><div class="btr small">${esc(b.btr)}</div><div class="muted">${esc(b.bhe)}</div></div><div class="owl-tip">💡 <b>טיפ מינשופי:</b> ${owlTip(key)}</div></div>`;}
+function botAnswerHTML(i,low){return answerCard(BOT[i],"b:"+i,low?`${OWL("owl-inline")} הוּ… לא בטוח שהבנתי עד הסוף. הכי קרוב שמצאתי: <u>${BOT[i].q}</u><div class="small muted" style="font-weight:normal;margin-top:4px">אם זה לא מה שהתכוונת, נס${G("י","ה")} לכתוב במילים אחרות.</div>`:null);}
 function botHTML(){const msgs=TRB.length?TRB:[{hello:1}];
- const html=msgs.map(m=>{if(m.hello)return `<div class="bmsg bot"><div class="bq">🦉 היי${S.name?" "+esc(S.name):""}! כתבו לי בעברית מה רוצים להגיד בחו״ל, ואני אגיד איך אומרים את זה באנגלית, איך קוראים את זה ומה עונים לכם.</div></div>`;
+ const html=msgs.map(m=>{if(m.hello)return `<div class="bmsg bot"><div class="bq">${OWL("owl-inline")} הוּ-הוּ${S.name?" "+esc(S.name):""}! כאן ינשופי 🦉 ספר${G("י","")} לי בעברית מה ${G("את","אתה")} רוצה להגיד, ואני אלחש לך איך אומרים את זה באנגלית.</div></div>`;
   if(m.u)return `<div class="bmsg me">${esc(m.u)}</div>`;
-  if(m.wait)return `<div class="bmsg bot"><div class="bq">✨ חושב על התשובה...</div></div>`;
-  if(m.ai)return answerCard(m.ai,aiKey(m.ai),(m.src==="claude"||m.src==="gemini")?`✨ ${esc(m.ai.q||"התשובה שלך")}`:null);
+  if(m.wait){if(m.wl==null)m.wl=Math.floor(Math.random()*OWL_WAIT.length);return `<div class="bmsg bot"><div class="bq owl-think">${OWL("owl-inline")} ${OWL_WAIT[m.wl]}</div></div>`;}
+  if(m.ai)return answerCard(m.ai,aiKey(m.ai),null);
   if(m.b!=null)return botAnswerHTML(m.b,m.low);
-  return `<div class="bmsg bot"><div class="bq">🤔 עוד לא מכיר את המשפט הזה בדיוק.</div>${m.words.length?`<div class="blbl">מילים שיכולות לעזור:</div><div class="tlist">${m.words.map(w=>`<div class="titem"><div class="tx"><b class="en">${esc(w.en)}</b>${w.tr?`<span class="ttr">🗣️ ${w.tr}</span>`:""}<span class="muted">${w.he}</span></div><div class="tools">${sayBtn(w.en,"mini")}${slowBtn(w.en,"mini")}</div></div>`).join("")}</div>`:""}<div class="muted" style="margin-top:8px">נסו לנסח אחרת, למשל "איך מבקשים מגבת" או "איפה התחנה", או בחרו שאלה מוכנה מלמטה.</div></div>`;}).join("");
- return `<div class="card botbox"><div class="chat" id="chat" aria-live="polite">${html}</div>
- <div class="chips">${BOT_CHIPS.map(c=>`<button class="chip2" data-a="bot-ask" data-q="${esc(c)}">${c}</button>`).join("")}</div>
- <form class="botf" id="botf"><input id="botq" autocomplete="off" maxlength="160" placeholder="כתבו בעברית: איך אומרים..." aria-label="שאלה לבוט"><button class="btn" type="submit">${BOT_BUSY?"⏳":"שליחה"}</button></form>
+  return `<div class="bmsg bot"><div class="bq">${OWL("owl-inline")} הוּ… את זה ינשופי לא הבין 🙈 נס${G("י","ה")} לכתוב במילים אחרות?</div>${m.words.length?`<div class="blbl">מילים שיכולות לעזור:</div><div class="tlist">${m.words.map(w=>`<div class="titem"><div class="tx"><b class="en">${esc(w.en)}</b>${w.tr?`<span class="ttr">🗣️ ${w.tr}</span>`:""}<span class="muted">${w.he}</span></div><div class="tools">${sayBtn(w.en,"mini")}${slowBtn(w.en,"mini")}</div></div>`).join("")}</div>`:""}<div class="muted" style="margin-top:8px">למשל "איך מבקשים מגבת" או "איפה התחנה", או בחרו שאלה מוכנה מלמטה.</div></div>`;}).join("");
+ return `<div class="card botbox"><div class="owl-head">${OWL("owl-hd")}<div><b>ינשופי</b><small>המתרגם האישי שלך לחו״ל</small></div></div><div class="chat" id="chat" aria-live="polite">${html}</div>
+ <div class="chips-t">ינשופי ממליץ לשאול:</div><div class="chips">${BOT_CHIPS.map(c=>`<button class="chip2" data-a="bot-ask" data-q="${esc(c)}">${c}</button>`).join("")}</div>
+ <form class="botf" id="botf"><input id="botq" autocomplete="off" maxlength="160" placeholder="כתב${G("י","")} בעברית: איך אומרים..." aria-label="שאלה לבוט"><button class="btn" type="submit">${BOT_BUSY?"⏳":"שליחה"}</button></form>
  <div class="err" id="boterr"></div><div class="small muted center" id="botnote">${SAMPLE?"✨ הבוט מחובר ל־Claude ומבין כל משפט.":GEM!==false?"✨ הבוט מחובר ל־Gemini ומבין כל משפט. אל תכתבו בו פרטים אישיים.":`📚 מצב בלי חיבור: מאגר של ${BOT.length} מצבים נפוצים בטיול, ותבנית לכתובות.`}</div></div>`;}
 let SAMPLE=null,BOT_BUSY=false;
 let GEM=(/^https?:$/.test(location.protocol)&&!/claude\.ai$|claudeusercontent|anthropic/.test(location.hostname))?null:false;
 async function askGemini(q){const ac=new AbortController();const to=setTimeout(()=>ac.abort(),16000);
- try{const r=await fetch("/api/bot",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({q}),signal:ac.signal});
+ try{const r=await fetch("/api/bot",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({q,g:S.gender==="m"?"m":"f"}),signal:ac.signal});
   if(r.status===404||r.status===405){GEM=false;throw Object.assign(new Error("no_function"),{code:"no_function"});}
   const d=await r.json().catch(()=>({}));
   if(!r.ok||!d.answer){if(d.error==="no_key")GEM=false;throw Object.assign(new Error(d.error||"error"),{code:d.error||"error"});}
   GEM=true;return d.answer;}finally{clearTimeout(to);}}
 (async()=>{try{if(window.claude&&typeof window.claude.use==="function"){const s=await window.claude.use("sample");if(s){SAMPLE=s;const n=$("#botnote");if(n)n.textContent="✨ הבוט מחובר ל־Claude ומבין כל משפט. בלי חיבור הוא עובר למאגר מובנה.";}}}catch(e){SAMPLE=null;}})();
 async function askClaude(q){
- const prompt=`You help an Israeli tourist who speaks Hebrew and knows very little English. They wrote, in Hebrew, what they want to say while abroad:\n${JSON.stringify(q)}\n\nReply with ONLY one JSON object, no other text, with these string fields:\n"q": a short Hebrew title of the situation (max 8 words),\n"en": one simple, natural English sentence (max 18 words) that says exactly what they want. Keep every name and number they gave. Write Hebrew names (hotels, streets, people) in Latin letters as they sound,\n"tr": how to pronounce "en", written in Hebrew letters with niqqud where it helps,\n"he": what "en" means, in Hebrew,\n"ren": what the other person usually answers, in short simple English,\n"rhe": its Hebrew translation,\n"ben": a short English reply the tourist can say next,\n"btr": how to pronounce "ben" in Hebrew letters,\n"bhe": its Hebrew translation,\n"note": an optional short practical tip in Hebrew, or an empty string.\nIf the request is not something to say in English, still give the most useful tourist phrase for it.`;
+ const prompt=`You help an Israeli tourist who speaks Hebrew and knows very little English. They wrote, in Hebrew, what they want to say while abroad:\n${JSON.stringify(q)}\n\nReply with ONLY one JSON object, no other text, with these string fields:\n"q": a short Hebrew title of the situation (max 8 words),\n"en": one simple, natural English sentence (max 18 words) that says exactly what they want. Keep every name and number they gave. Write Hebrew names (hotels, streets, people) in Latin letters as they sound,\n"tr": how to pronounce "en", written in Hebrew letters with niqqud where it helps,\n"he": what "en" means, in Hebrew,\n"ren": what the other person usually answers, in short simple English,\n"rhe": its Hebrew translation,\n"ben": a short English reply the tourist can say next,\n"btr": how to pronounce "ben" in Hebrew letters,\n"bhe": its Hebrew translation,\n"note": a short practical tip in Hebrew (max 20 words), written warmly and playfully as "ינשופי", a friendly owl who is the app's guide, or an empty string.\nWrite all Hebrew text addressing the tourist in ${S.gender==="m"?"masculine":"feminine"} form.\nIf the request is not something to say in English, still give the most useful tourist phrase for it.`;
  const ac=new AbortController();const to=setTimeout(()=>ac.abort(),12000);let r;try{r=await SAMPLE(prompt,{modelTier:"quick",cache:false,signal:ac.signal});}finally{clearTimeout(to);}const txt=(r&&r.text)||"";const m=txt.match(/\{[\s\S]*\}/);if(!m)throw new Error("no json");
  const o=JSON.parse(m[0]);const need=["en","tr","he","ren","rhe","ben","btr","bhe"];for(const k of need){if(typeof o[k]!=="string"||!o[k].trim())throw new Error("missing "+k);}
  const out={};["q","en","tr","he","ren","rhe","ben","btr","bhe","note"].forEach(k=>out[k]=String(o[k]||"").slice(0,220));return out;}
@@ -1406,6 +1608,9 @@ function buildTravel(d){const s=TRAVEL[d.s],all=s.w.concat(s.p),isW=d.k<s.w.leng
 const ACT={
  back(){const [n,o]=backTarget();go(n,o);},
  home(){go("home");},
+ lessons(){if(!S.placed){PT={i:-1,score:0,done:false};go("placement");return;}go("lessons");},
+ bot(){go("travel",{tab:"bot"});},
+ plan(d){const P=planState();const x=P.steps.find(y=>y.k===+d.k)||P.steps[0];x.act();},
  mute(){S.mute=!S.mute;save();if(S.mute&&HAS_TTS)speechSynthesis.cancel();const b=document.querySelector('[data-a="mute"]');if(b){b.innerHTML=S.mute?I.mute:I.vol;}toast(S.mute?"🔇 הצלילים כבויים":"🔊 הצלילים פועלים",1300);},
  sec(d){if(!S.placed){PT={i:-1,score:0,done:false};go("placement");return;}go("map",{sec:d.sec});},
  level(d){const sec=d.sec,lv=+d.lv;S.lastSec=sec;save();if(!unlocked(sec,lv)){sfx("bad");toast("🔒 קודם צריך לעבור את הרמה הקודמת");return;}

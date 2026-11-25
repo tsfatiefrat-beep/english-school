@@ -4,7 +4,7 @@ const MODELS = [process.env.GEMINI_MODEL, "gemini-4-hydrogen", "gemini-flash-lat
 const cache = new Map();
 const hits = new Map();
 
-function prompt(q) {
+function prompt(q, g) {
   return `You help an Israeli tourist who speaks Hebrew and knows very little English. They wrote, in Hebrew, what they want to say while abroad:
 ${JSON.stringify(q)}
 
@@ -18,7 +18,8 @@ Reply with ONLY one JSON object with these string fields:
 "ben": a short English reply the tourist can say next,
 "btr": how to pronounce "ben" in Hebrew letters,
 "bhe": its Hebrew translation,
-"note": an optional short practical tip in Hebrew, or an empty string.
+"note": a short practical tip in Hebrew (max 20 words), written warmly and playfully as "ינשופי", a friendly owl who is the app's guide, or an empty string.
+Write all Hebrew text addressing the tourist in ${g === "m" ? "masculine" : "feminine"} form.
 If the request is not something to say in English, still give the most useful tourist phrase for it.`;
 }
 
@@ -32,8 +33,8 @@ export default async (req, context) => {
   const key = (typeof Netlify !== "undefined" && Netlify.env && Netlify.env.get("GEMINI_API_KEY")) || process.env.GEMINI_API_KEY;
   if (!key) return json({ error: "no_key" }, 503);
 
-  let q = "";
-  try { q = String((await req.json()).q || "").trim().slice(0, 200); } catch { return json({ error: "bad_request" }, 400); }
+  let q = "", g = "f";
+  try { const d = await req.json(); q = String(d.q || "").trim().slice(0, 200); g = d.g === "m" ? "m" : "f"; } catch { return json({ error: "bad_request" }, 400); }
   if (!q) return json({ error: "empty" }, 400);
 
   // light abuse protection: max 20 questions per minute per visitor
@@ -42,10 +43,11 @@ export default async (req, context) => {
   if (list.length >= 20) return json({ error: "rate_limited" }, 429);
   list.push(now); hits.set(ip, list);
 
-  if (cache.has(q)) return json({ answer: cache.get(q), cached: true });
+  const ck = g + ":" + q;
+  if (cache.has(ck)) return json({ answer: cache.get(ck), cached: true });
 
   const body = {
-    contents: [{ role: "user", parts: [{ text: prompt(q) }] }],
+    contents: [{ role: "user", parts: [{ text: prompt(q, g) }] }],
     generationConfig: { temperature: 0.3, responseMimeType: "application/json", maxOutputTokens: 600 }
   };
   let lastErr = "unknown";
@@ -70,7 +72,7 @@ export default async (req, context) => {
       const out = {};
       ["q", "en", "tr", "he", "ren", "rhe", "ben", "btr", "bhe", "note"].forEach(k => out[k] = String(o[k] || "").slice(0, 220));
       if (cache.size > 500) cache.clear();
-      cache.set(q, out);
+      cache.set(ck, out);
       return json({ answer: out, model });
     } catch (e) { lastErr = e && e.name === "TimeoutError" ? "timeout" : "fetch_failed"; }
   }
