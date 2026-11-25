@@ -72,6 +72,19 @@ Continue the role play with the tutor's next turn. Reply with ONLY one JSON obje
 ${NO_SOUNDS}`;
 }
 
+
+// Find the Gemini key even if the environment variable got a different name.
+const KEY_NAMES = ["GEMINI_API_KEY", "DefaultGeminiAPIKey", "GOOGLE_API_KEY", "GEMINI_KEY", "API_KEY"];
+function envGet(n) { try { if (typeof Netlify !== "undefined" && Netlify.env) { const v = Netlify.env.get(n); if (v) return v; } } catch {} return process.env[n]; }
+function findKey() {
+  for (const n of KEY_NAMES) { const v = envGet(n); if (v && v.trim()) return { key: v.trim(), name: n }; }
+  let all = {};
+  try { if (typeof Netlify !== "undefined" && Netlify.env && Netlify.env.toObject) all = Netlify.env.toObject(); } catch {}
+  all = Object.assign({}, process.env, all);
+  for (const [n, v] of Object.entries(all)) if (typeof v === "string" && /^AIza[0-9A-Za-z_\-]{20,}$/.test(v.trim())) return { key: v.trim(), name: n };
+  return { key: null, name: null };
+}
+
 const json = (obj, status = 200) => new Response(JSON.stringify(obj), {
   status,
   headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" }
@@ -89,9 +102,11 @@ async function callModel(key, model, text, think) {
 }
 
 async function ask(key, text) {
+  const t0 = Date.now();
   const order = goodModel ? [goodModel, ...MODELS.filter(m => m !== goodModel)] : MODELS;
   let lastErr = "unknown";
   for (const model of order) {
+    if (Date.now() - t0 > 20000) { lastErr = "timeout"; break; }
     try {
       let r = await callModel(key, model, text, noThinking);
       if (r.status === 400 && noThinking) { noThinking = false; r = await callModel(key, model, text, false); }
@@ -112,8 +127,11 @@ async function ask(key, text) {
 const S = (v, n = 300) => String(v ?? "").replace(/הוּ-הוּ[!,.]?\s*|הו-הו[!,.]?\s*/g, "").slice(0, n);
 
 export default async (req, context) => {
+  const found = findKey();
+  // GET /api/bot = quick health check (never shows the key itself)
+  if (req.method === "GET") return json({ ok: true, hasKey: !!found.key, keyName: found.name || null, model: goodModel });
   if (req.method !== "POST") return json({ error: "method" }, 405);
-  const key = (typeof Netlify !== "undefined" && Netlify.env && Netlify.env.get("GEMINI_API_KEY")) || process.env.GEMINI_API_KEY;
+  const key = found.key;
   if (!key) return json({ error: "no_key" }, 503);
 
   let d;

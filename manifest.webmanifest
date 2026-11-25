@@ -1,0 +1,20 @@
+{
+  "name": "English School · ינשופי",
+  "short_name": "English School",
+  "description": "לומדים אנגלית ב־5 דקות ביום: מילים, משפטים, דקדוק, דיבור ואנגלית לחו״ל, עם ינשופי המורה האישי.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "he",
+  "background_color": "#F6F5FB",
+  "theme_color": "#5B43E0",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
